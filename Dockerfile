@@ -11,4 +11,6 @@ RUN apt-get update && apt-get install -y \
 		xzdec \
 	&& tlmgr init-usertree \
 	&& tlmgr install minted \
+	&& tlmgr install fira \
+	&& tlmgr install beamertheme-focus \
 	&& rm -rf /var/lib/apt/lists/*
