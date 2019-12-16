@@ -1,16 +1,29 @@
-# based on https://hub.docker.com/r/tianon/latex/dockerfile. Thank you! ❤️
-FROM debian:stretch-slim
+FROM alpine:latest
 
-RUN apt-get update && apt-get install -y \
-		biber \
-		latexmk \
-		make \
-		texlive-full \
-		python-pygments \
-		wget \
-		xzdec \
-	&& tlmgr init-usertree \
-	&& tlmgr install minted \
-	&& tlmgr install fira \
-	&& tlmgr install beamertheme-focus \
-	&& rm -rf /var/lib/apt/lists/*
+# Base
+RUN apk --no-cache add \
+  ghostscript \
+  gnupg \
+  perl \
+  python \
+  tar \
+  wget \
+  xz
+
+# Pygments:
+RUN wget https://bootstrap.pypa.io/get-pip.py \
+  && python get-pip.py \
+  && rm get-pip.py \
+  && pip install pygments
+
+ENV PATH="/opt/texlive/texdir/bin/x86_64-linuxmusl:${PATH}"
+WORKDIR /root
+
+COPY \
+  LICENSE \
+  README.md \
+  setup.sh \
+  texlive.profile \
+  texlive_pgp_keys.asc \
+  /root/
+RUN /root/setup.sh

@@ -2,11 +2,15 @@
 
 ## Overview
 
-Based on https://hub.docker.com/r/tianon/latex/dockerfile, but adding following additional packages:
+- Docker-based LaTeX environment
+- Works with [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop) for [vscode](https://code.visualstudio.com/). See [here](https://github.com/James-Yu/LaTeX-Workshop/wiki/Install#using-docker) for configuration settings. Use `swissmanu/latex:latest` as Docker image.
 
-- [minted](https://www.ctan.org/pkg/minted) source code highlighter
-- [beamertheme-focus](https://ctan.org/pkg/beamertheme-focus) theme for presentation slides
+## Additional Available Packages
+
+- [ccicons](https://www.ctan.org/pkg/ccicons)
+- [beamertheme-focus](https://ctan.org/pkg/beamertheme-focus)
+- [minted](https://www.ctan.org/pkg/minted)
 
 ## Credits
 
-- ❤️ https://hub.docker.com/r/tianon/latex/dockerfile
+- ❤️ based on https://github.com/xu-cheng/latex-action, MIT License, Copyright (c) 2019 Cheng XU
