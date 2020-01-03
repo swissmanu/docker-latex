@@ -5,7 +5,9 @@ set -e
 echo "==> Install TeXLive 📝"
 mkdir -p /tmp/install-tl
 cd /tmp/install-tl
-MIRROR_URL="$(wget -q -S -O /dev/null http://mirror.ctan.org/ 2>&1 | sed -ne 's/.*Location: \(\w*\)/\1/p' | head -n 1)"
+# MIRROR_URL="$(wget -q -S -O /dev/null http://mirror.ctan.org/ 2>&1 | sed -ne 's/.*Location: \(\w*\)/\1/p' | head -n 1)"
+# MIRROR_URL="https://ctan.kako-dev.de/"
+MIRROR_URL="https://ctan.net/"
 wget -nv "${MIRROR_URL}systems/texlive/tlnet/install-tl-unx.tar.gz"
 wget -nv "${MIRROR_URL}systems/texlive/tlnet/install-tl-unx.tar.gz.sha512"
 wget -nv "${MIRROR_URL}systems/texlive/tlnet/install-tl-unx.tar.gz.sha512.asc"
@@ -30,6 +32,8 @@ tlmgr install \
   catchfile \
   fontaxes \
   appendixnumberbeamer \
+  pdfpages \
+  fontawesome \
   ccicons \
   minted fvextra xstring framed \
   fira beamertheme-focus

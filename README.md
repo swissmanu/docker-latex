@@ -8,6 +8,7 @@
 ## Additional Available Packages
 
 - [ccicons](https://www.ctan.org/pkg/ccicons)
+- [fontawesome](https://www.ctan.org/pkg/fontawesome)
 - [beamertheme-focus](https://ctan.org/pkg/beamertheme-focus)
 - [minted](https://www.ctan.org/pkg/minted)
 
