@@ -11,6 +11,7 @@
 - [fontawesome](https://www.ctan.org/pkg/fontawesome)
 - [beamertheme-focus](https://ctan.org/pkg/beamertheme-focus)
 - [minted](https://www.ctan.org/pkg/minted)
+- [tcolorbox](https://www.ctan.org/pkg/tcolorbox)
 
 ## Credits
 
