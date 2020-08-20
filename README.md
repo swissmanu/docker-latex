@@ -13,6 +13,7 @@
 - [minted](https://www.ctan.org/pkg/minted)
 - [tcolorbox](https://www.ctan.org/pkg/tcolorbox)
 - [komacv](https://www.ctan.org/pkg/komacv)
+- [acmart](http://www.sigplan.org/Resources/Author/#acmart-format)
 
 ## Credits
 

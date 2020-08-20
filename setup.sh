@@ -41,7 +41,8 @@ tlmgr install \
   ccicons \
   minted fvextra xstring framed \
   fira beamertheme-focus \
-  komacv enumitem lastpage
+  komacv enumitem lastpage \
+  acmart totpages comment cm-super cmap draftwatermark fontaxes inconsolata libertine ncctools microtype mmap mweights newtx setspace preprint \
 
 echo "==> Clean up 🧽"
 rm -rf \
